@@ -14,6 +14,12 @@ a:hover {
     text-decoration: underline;
 }
 
+img:hover {
+    cursor: pointer;
+}
+
+/* HEADER */
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -36,9 +42,98 @@ ul > a, ul > img {
     cursor: pointer;
 }
 
+/* MAIN */
+
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 5vh;
+    margin-top: 13vh;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    height: 38px;
+    border: 1px solid gainsboro;
+    border-radius: 20px;
+}
+
+.input-container:hover{
+    box-shadow: 0 0 10px 0 gainsboro;
+}
+
+.input-container > img {
+    height: 24px;
+    margin-top: 7px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.input-container > input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+}
+
+.button-container {
+    padding-top: 50px;
+}
+
+button {
+    background-color: #F8F9FA;
+    border-radius: 5px;
+    border: none;
+    height: 36px;
+    padding: 0 20px;
+    margin: 0 4px;
+}
+
+button:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px 0 gainsboro;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #F2F2F2;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+}
+
+#footer-left {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 10px;
+    align-items: center;
+}
+
+#footer-right {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+    align-items: center;
+}
+
+.footer-center {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 660px) {
+    #footer-nav {
+        flex-direction: column;
+    }
+    #footer-left {
+        justify-content: center;
+    }
+    #footer-right {
+        justify-content: center;
+    }
+
+    .input-container {
+        width: 95vw;
+    }
 }
